@@ -1,0 +1,45 @@
+body { 
+  font-family: "Times New Roman",Arial,Helvetica,sans-serif;
+  background-color: rgb(255,255,240); 
+  color: rgb(0, 0, 0);
+}
+
+h2 { 
+  font-size: 35pt; 
+  font-weight: normal; 
+  color: rgb(140,0,60); 
+  background-color: rgb(255,255,240); 
+  margin: 60px 60px 20px 60px;
+  letter-spacing: 0.03em;
+}
+
+table { margin-left: auto; margin-right: auto; }
+.center { text-align: center; }
+td { font-size: 13pt; font-weight: normal; text-align: center; letter-spacing: 0.04em; }
+
+table td.title {
+  font-size: 13pt; 
+  font-weight: normal; 
+  text-align: center; 
+  letter-spacing: 0.5em; 
+  color: rgb(120,120,120);
+}
+
+a, a:active, a:hover a:visited { 
+  color: rgb(50,150,255); 
+  background-color: rgb(255,255,240); 
+  text-decoration: none; 
+  padding: 8px 6px 8px 6px;
+  display: block;
+}
+
+a:hover { 
+  color: rgb(50,120,255); 
+  background-color: rgb(255,255,235); 
+  padding: 7px 6px 7px 6px;
+  border: 1px solid rgb(190,240,255);
+}
+
+.empty { font-size: 1px; height: 10px; }
+
+hr { border: 0; height: 1px; width: 95%; background-color: rgb(120,120,120); color: rgb(120,120,120); }
