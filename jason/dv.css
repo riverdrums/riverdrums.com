@@ -1,0 +1,63 @@
+TD {
+  font-family: Verdana,Arial,Helvetica,sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+td.bio { padding: 9px; }
+
+table.bio {
+  font-family: Verdana,Arial,Helvetica,sans-serif;
+  font-size: 14px;
+  border: inset 1px black;
+  border-spacing: 5px;
+  empty-cells: show;
+}
+
+.bio A:link {text-decoration: underline; }
+.bio A:visited {text-decoration: underline; }
+.bio A:active {text-decoration: underline; }
+.bio A:hover {text-decoration: none; background: #ccc; color: #333;}
+
+
+H1.western { font-family: "Arial", sans-serif; font-size: 14pt; font-weight: medium }
+.western A:link {text-decoration: none; color: #333; background-color: #fff}
+.western A:visited {text-decoration: none; color: #333; background-color: #fff}
+.western A:active {text-decoration: none; color: #333; background-color: #fff}
+.western A:hover {background: #ccc; color: #333;}
+
+.header {
+  font-family: Verdana,Arial,Helvetica,sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.header A:link {text-decoration: underline; color: #333; background-color: #fff}
+.header A:visited {text-decoration: underline; color: #333; background-color: #fff}
+.header A:active {text-decoration: underline; color: #333; background-color: #fff}
+.header A:hover {text-decoration: none; background: #ccc; color: #333;}
+
+.items {
+  font-family: Verdana,Arial,Helvetica,sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.items A:link {font-weight: normal; text-decoration: underline; color: #000; background-color: #fff}
+.items A:visited {font-weight: normal; text-decoration: none; color: #000; background-color: #fff}
+.items A:active {font-weight: normal; text-decoration: none; color: #000; background-color: #fff}
+.items A:hover {font-weight: normal; background: #ccc; color: #000;}
+
+.copyright {
+  font-family: Verdana,Arial,Helvetica,sans-serif;
+  font-size: 9px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.copyright A:link {text-decoration: underline; color: #000; background-color: #fff}
+.copyright A:visited {text-decoration: none; color: #000; background-color: #fff}
+.copyright A:active {text-decoration: none; color: #000; background-color: #fff}
+.copyright A:hover {background: #ccc; color: #000;}
