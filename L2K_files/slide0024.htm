@@ -1,0 +1,148 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 9">
+<link id=Main-File rel=Main-File href="../L2K.htm">
+<link rel=Preview href=preview.wmf>
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+p\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+v\:textbox {display:none;}
+</style>
+<![endif]-->
+<title>Modules and the Apache Web Server</title>
+<meta name=Description content="19-Dec-00: HTTP Header">
+<link rel=Stylesheet href="master03_stylesheet.css">
+<![if !ppt]>
+
+<bgsound id=pptSound>
+
+<style media=print>
+<!--.sld
+	{left:0px !important;
+	width:6.0in !important;
+	height:4.5in !important;
+	font-size:107% !important;}
+-->
+</style>
+<script src=script.js></script><script><!--
+gId="slide0024.htm"
+if( !IsNts() ) Redirect( "PPTSld", gId );
+//-->
+</script><!--[if vml]><script>g_vml = 1;
+</script><![endif]--><script for=window event=onload><!--
+if( !IsSldOrNts() ) return;
+if( MakeNotesVis() ) return;
+LoadSld( gId );
+InitBuildEffects();
+MakeSldVis(0);
+//-->
+</script><![endif]><o:shapelayout v:ext="edit">
+ <o:idmap v:ext="edit" data="26"/>
+</o:shapelayout>
+</head>
+
+<body lang=EN-US style='margin:0px;background-color:white'
+onclick="DocumentOnClick()" onresize="_RSW()" onkeypress="_KPH()">
+
+<div id=SlideObj class=sld style='position:absolute;top:0px;left:0px;
+width:534px;height:400px;font-size:16px;background-color:white;clip:rect(0%, 101%, 101%, 0%);
+visibility:hidden'><p:slide coordsize="720,540"
+ colors="#FFFFFF,#000000,#808080,#000000,#00CC99,#3333CC,#CCCCFF,#B2B2B2"
+ masterhref="master03.xml">
+ <p:shaperange href="master03.xml#_x0000_s1025"/><![if !ppt]><p:shaperange
+  href="master03.xml#_x0000_s1028"/><p:shaperange
+  href="master03.xml#_x0000_s1029"/><![endif]><p:shaperange
+  href="master03.xml#_x0000_m1026"/><v:shape id="_x0000_s26626" type="#_x0000_m1026"
+  style='position:absolute;left:54pt;top:48pt;width:612pt;height:90pt'
+  o:userdrawn="f">
+  <v:fill o:detectmouseclick="f"/>
+  <v:stroke o:forcedash="f"/>
+  <o:lock v:ext="edit" text="f"/>
+  <p:placeholder type="title"/></v:shape>
+ <div v:shape="_x0000_s26626" class=T style='position:absolute;top:13.5%;
+ left:8.42%;width:83.14%;height:8.0%'><span style='font-size:86%;text-shadow:
+ auto'>HTTP Header</span></div>
+ <![if !ppt]>
+ <div style='visibility:hidden'><![endif]><p:shaperange
+  href="master03.xml#_x0000_m1027"/><v:shape id="_x0000_s26627" type="#_x0000_m1027"
+  style='position:absolute;left:54pt;top:156pt;width:612pt;height:78pt'
+  o:userdrawn="f">
+  <v:fill o:detectmouseclick="f"/>
+  <v:stroke o:forcedash="f"/>
+  <o:lock v:ext="edit" text="f"/>
+  <p:placeholder type="body" position="1"/><p:animation number="1" delay="0"
+   type="object" effect="cut" direction="noBlack" flag="1024"/></v:shape><![if !ppt]></div>
+ <![endif]><![if !ppt]>
+ <div style='position:absolute;top:29.0%;left:7.49%;width:85.39%;height:14.75%'><![endif]>
+ <div v:shape="_x0000_s26627" class=B style='position:absolute;top:3.38%;
+ left:1.09%;width:97.36%;height:81.35%;overflow:hidden;visibility:hidden;
+ mso-build:200;mso-build-order:1'>
+ <div style='position:absolute;top:0%;left:0%;width:100.0%;height:45.83%'><span
+ style='mso-special-format:nobullet;display:none'>•</span><span
+ style='font-family:Tahoma;font-size:75%'>r-&gt;content_type =
+ “text/html”;&#13;</span></div>
+ <div style='position:absolute;top:54.16%;left:0%;width:100.0%;height:45.83%'><span
+ style='mso-special-format:nobullet;display:none'>•</span><span
+ style='font-family:Tahoma;font-size:75%'>ap_send_http_header(r);</span><span
+ style='font-family:Tahoma;mso-ascii-font-family:Tahoma;mso-fareast-font-family:
+ Tahoma;mso-hansi-font-family:Tahoma;font-size:75%;mso-special-format:lastCR;
+ display:none'>&#13;</span></div>
+ </div>
+ <![if !ppt]></div>
+ <![endif]><![if !ppt]>
+ <div style='visibility:hidden'><![endif]><v:shapetype id="_x0000_t202"
+  coordsize="21600,21600" o:spt="202" path="m0,0l0,21600,21600,21600,21600,0xe">
+  <v:stroke joinstyle="miter"/>
+  <v:path gradientshapeok="t" o:connecttype="rect"/>
+ </v:shapetype><v:shape id="_x0000_s26628" type="#_x0000_t202" style='position:absolute;
+  left:102pt;top:270pt;width:516pt;height:174pt' filled="f" fillcolor="#0c9 [4]"
+  stroked="f" strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="gray [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+  <p:animation number="2" delay="0" type="object" effect="cut"
+   direction="noBlack" flag="17408"/></v:shape><![if !ppt]></div>
+ <![endif]><![if !ppt]>
+ <div style='position:absolute;top:50.0%;left:14.23%;width:71.91%;height:32.75%'><![endif]>
+ <div v:shape="_x0000_s26628" class=O style='position:absolute;top:2.29%;
+ left:1.3%;width:97.13%;height:95.41%;overflow:hidden;visibility:hidden;
+ mso-build:200;mso-build-order:2'>
+ <div style='mso-line-spacing:"100 20 0";position:absolute;top:0%;left:0%;
+ width:100.0%;height:17.6%'><span style='font-family:Tahoma;mso-ascii-font-family:
+ Tahoma;mso-fareast-font-family:Tahoma;mso-hansi-font-family:Tahoma;color:#006600'>HTTP/1.1
+ 200 OK&#13;</span></div>
+ <div style='mso-line-spacing:"100 20 0";position:absolute;top:20.0%;
+ left:0%;width:100.0%;height:17.6%'><span style='font-family:Tahoma;mso-ascii-font-family:
+ Tahoma;mso-fareast-font-family:Tahoma;mso-hansi-font-family:Tahoma;color:#006600'>Date:
+ Tue, 31 Oct 2000 13:06:40 GMT&#13;</span></div>
+ <div style='mso-line-spacing:"100 20 0";position:absolute;top:40.79%;
+ left:0%;width:100.0%;height:17.6%'><span style='font-family:Tahoma;mso-ascii-font-family:
+ Tahoma;mso-fareast-font-family:Tahoma;mso-hansi-font-family:Tahoma;color:#006600'>Server:
+ Apache/1.3.14 (Unix)&#13;</span></div>
+ <div style='mso-line-spacing:"100 20 0";position:absolute;top:60.8%;
+ left:0%;width:100.0%;height:17.6%'><span style='font-family:Tahoma;mso-ascii-font-family:
+ Tahoma;mso-fareast-font-family:Tahoma;mso-hansi-font-family:Tahoma;color:#006600'>Connection:
+ close&#13;</span></div>
+ <div style='mso-line-spacing:"100 20 0";position:absolute;top:81.59%;
+ left:0%;width:100.0%;height:18.39%'><span lang=EN-GB style='font-family:Tahoma;
+ mso-ascii-font-family:Tahoma;mso-fareast-font-family:"Times New Roman";
+ mso-hansi-font-family:Tahoma;color:#006600'>Content-Type: text/html</span><span
+ style='font-family:Tahoma;mso-ascii-font-family:Tahoma;mso-hansi-font-family:
+ Tahoma'> </span><span style='font-size:158%;text-shadow:auto;mso-special-format:
+ lastCR;display:none'>&#13;</span></div>
+ </div>
+ <![if !ppt]></div>
+ <![endif]></p:slide></div>
+
+</body>
+
+</html>

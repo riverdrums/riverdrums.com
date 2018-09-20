@@ -1,0 +1,1423 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 9">
+<link id=Main-File rel=Main-File href="../L2K.htm">
+<link rel=Preview href=preview.wmf>
+
+<script>
+<!--
+if( window.name != "PPTOtl" )
+  parent.location.href = "../L2K.htm";
+//-->
+</script>
+<meta name=Robots content=NoIndex>
+</head>
+
+<body bgcolor=white text=black link=black vlink=black alink=black>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0001.htm');">Modules and the Apache
+Web Server</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>Jason Armstrong</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>jason@datrix.co.za</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1></td>
+ </tr>
+</table>
+
+</p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0034.htm');">Agenda</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>History of Apache and the Apache
+  Software Foundation</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>What is an Apache module?</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>A simple module</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>Apache API functions</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>Installing and configuring a module
+  within Apache</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>Apache structures</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>Module structures</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>Linux 2000 Module</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>Apache 2.0</font></td>
+ </tr>
+</table>
+
+</p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0002.htm');">Apache Software
+Foundation</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>Not-for-profit organisation,
+  incorporated in June 1999</font></td>
+ </tr>
+</table>
+
+</p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0032.htm');">Projects of the ASF</a></b></font></p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0003.htm');">The Apache Web Server</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>Flexible</font></td>
+ </tr>
+</table>
+
+</p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0004.htm');">Apache Usage</a></b></font></p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0005.htm');">Apache Modules</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width=20 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=2><font face=Arial size=2>Many core features implemented as
+  modules</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>logging</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>authentication</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>access control</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>CGI (Common Gateway Interface)</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=2><font face=Arial size=2>Performance reasons for using modules</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=2><font face=Arial size=2>Flexibility to extend functionality</font></td>
+ </tr>
+</table>
+
+</p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0007.htm');">Some Existing Modules</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>PHP (PHP: Hypertext Preprocessor)</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>Perl</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>CGI (Common Gateway Interface)</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>SSL (Secure Socket Layer)</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>DAV (Distributed Authoring and
+  Versioning)</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>Rewrite</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>MySQL Auth (Authentication from MySQL)</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>http://modules.apache.org</font></td>
+ </tr>
+</table>
+
+</p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0006.htm');">Request Handling</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width=20 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=2><font face=Arial size=2>Requests are handled in a number of
+  phases</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>URI to filename translation</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>Access control phases</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>Determining MIME type of the requested
+  object</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>Sending data back to the client</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>Logging the request</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=2><font face=Arial size=2>User code can elect to handle any of
+  these phases by declaring a handler for that phase</font></td>
+ </tr>
+</table>
+
+</p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0008.htm');">Handlers</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width=20 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=2><font face=Arial size=2>Handlers are functions</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=2><font face=Arial size=2>They take one argument, a request_rec
+  structure</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=2><font face=Arial size=2>A handler can</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>Handle the request, and return OK</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>Decline the request, returning DECLINED</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>Signal an error by returning an HTTP
+  error code</font></td>
+ </tr>
+</table>
+
+</p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0033.htm');">Simple Module</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width=20 nowrap></td>
+  <td width=20 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=3><font face=Arial size=2>Goal of our module:</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=2><font face=Arial size=2>To print the current time when it is
+  called</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=2></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=3><font face=Arial size=2>Three sections:</font></td>
+ </tr>
+ <tr>
+  <td colspan=3></td>
+  <td colspan=1><font face=Arial size=2>Declaring our interest to Apache</font></td>
+ </tr>
+ <tr>
+  <td colspan=3></td>
+  <td colspan=1><font face=Arial size=2>Declaring our handler (it’s name and
+  where to find it)</font></td>
+ </tr>
+ <tr>
+  <td colspan=3></td>
+  <td colspan=1><font face=Arial size=2>The handler function itself</font></td>
+ </tr>
+</table>
+
+</p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0021.htm');">Simple module structure</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>module simple_module = {</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;STANDARD_MODULE_STUFF,</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;NULL,</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;NULL,</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;NULL,</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;NULL,</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;NULL,</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;NULL,</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;simple_handler,</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;NULL</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>};</font></td>
+ </tr>
+</table>
+
+</p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0022.htm');">Simple handler table</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>static const handler_rec
+  simple_handler[] = {</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;{ &quot;simple-handler&quot;,
+  handler_simple },</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;{ NULL }</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>};</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1></td>
+ </tr>
+</table>
+
+</p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0018.htm');">API functions</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width=20 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=2><font face=Arial size=2>Setting Content Type</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>r-&gt;content_type = “text/html”;</font></td>
+ </tr>
+</table>
+
+</p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0024.htm');">HTTP Header</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>r-&gt;content_type = “text/html”;</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>ap_send_http_header(r);</font></td>
+ </tr>
+</table>
+
+</p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0026.htm');">HTTP Body</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>ap_rputs(&quot;&quot;, r) and
+  ap_rprintf(r, &quot;%s&quot;, s)</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1></td>
+ </tr>
+</table>
+
+</p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0023.htm');">Simple handler function</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>static int handler_simple(request_rec
+  *r) {</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;time_t now;</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;r-&gt;content_type =
+  &quot;text/html&quot;;</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;ap_send_http_header(r);</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;time(&amp;now);</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;ap_rputs(&quot;&lt;html&gt;&lt;head&gt;&lt;meta
+  http-equiv=refresh content=5&gt;\n&quot;, r);</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;ap_rputs(&quot;&lt;title&gt;Simple:Time&lt;/title&gt;&lt;/head&gt;\n&quot;,
+  r);</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;ap_rputs(&quot;&lt;body
+  bgcolor=white&gt;&lt;center&gt;\n&quot;, r);</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;ap_rputs(&quot;&lt;font
+  face=\&quot;arial\&quot; color=\&quot;blue\&quot;&gt;&lt;h3&gt;&quot;, r);</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;ap_rprintf(r, &quot;%s&quot;,
+  ctime(&amp;now));</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;ap_rputs(&quot;&lt;/h3&gt;&lt;/font&gt;\n&lt;/center&gt;\n&quot;,
+  r);</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;ap_rputs(&quot;&lt;/body&gt;&lt;/html&gt;\n&quot;,
+  r);</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;return OK;</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>}</font></td>
+ </tr>
+</table>
+
+</p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0027.htm');">Building a module into
+Apache</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>$ cd /usr/src/apache_1.3.14/</font></td>
+ </tr>
+</table>
+
+</p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0028.htm');">Configuring Apache</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width=20 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=2><font face=Arial size=2>Edit the Apache configuration file
+  (httpd.conf)</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=2></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>&lt;Location /simple&gt;</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2><span style="mso-spacerun: yes">   
+  </span>SetHandler simple-handler</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>&lt;/Location&gt;</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=2><font face=Arial size=2>Our simple module now handles all
+  requests for<span style="mso-spacerun: yes">      </span>&#9;http://www.ourserver.com/simple</font></td>
+ </tr>
+</table>
+
+</p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0015.htm');">Apache Structures</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width=20 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=2><font face=Arial size=2>server_rec</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>A server_rec structure is created for
+  each virtual host on startup. This structure contains information about the
+  current server</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=2><font face=Arial size=2>conn_rec</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>Stores information about the current
+  connection</font></td>
+ </tr>
+</table>
+
+</p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0016.htm');">Apache structures (cont)</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width=20 nowrap></td>
+  <td width=20 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=3><font face=Arial size=2>request_rec</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=2><font face=Arial size=2>Information about the current request</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=2><font face=Arial size=2>Contains pointers to conn_rec and
+  server_rec structures</font></td>
+ </tr>
+ <tr>
+  <td colspan=3></td>
+  <td colspan=1><font face=Arial size=2>Type of request</font></td>
+ </tr>
+ <tr>
+  <td colspan=3></td>
+  <td colspan=1><font face=Arial size=2>Protocol</font></td>
+ </tr>
+ <tr>
+  <td colspan=3></td>
+  <td colspan=1><font face=Arial size=2>Languages</font></td>
+ </tr>
+ <tr>
+  <td colspan=3></td>
+  <td colspan=1><font face=Arial size=2>Headers</font></td>
+ </tr>
+ <tr>
+  <td colspan=3></td>
+  <td colspan=1><font face=Arial size=2>Content Type</font></td>
+ </tr>
+ <tr>
+  <td colspan=3></td>
+  <td colspan=1><font face=Arial size=2>Caching directives</font></td>
+ </tr>
+ <tr>
+  <td colspan=3></td>
+  <td colspan=1><font face=Arial size=2>Authentication directives</font></td>
+ </tr>
+</table>
+
+</p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0009.htm');">Module Structure</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>Hooks into various phases of the
+  request</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;module xxx = {</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;&#9;STANDARD_MODULE_STUFF,</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;&#9;/* initializer */</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;&#9;/* directory config creator */</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;&#9;/* directory merger */</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;&#9;/* server config */</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;&#9;/* merge server config */</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;&#9;/* command table */</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;&#9;/* handler table */</font></td>
+ </tr>
+</table>
+
+</p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0010.htm');">Module Structure (cont)</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;&#9;/* translate handler */</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;&#9;/* check user id */</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;&#9;/* auth checker */</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;&#9;/* access checker */</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;&#9;/* type checker */</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;&#9;/* fixups */</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;&#9;/* logger */</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;&#9;/* header parser */</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;&#9;/* child init */</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;&#9;/* child exit */</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;&#9;/* post read request */</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;&#9;/* add module */</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;&#9;/* remove<span
+  style="mso-spacerun: yes">  </span>module */</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;&#9;/* rewrite command */</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;&#9;/* new connection */</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;&#9;/* close connection */</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;};</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1></td>
+ </tr>
+</table>
+
+</p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0035.htm');">More detailed module
+(Linux 2000)</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width=20 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=2><font face=Arial size=2>Goal of our module:</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>To add customised text to the top and
+  bottom of a page</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>To configure this text via Apache's
+  configuration file</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=2><font face=Arial size=2>Stages:</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>Declare our handler and commands to
+  Apache</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>Define our handler and commands in the
+  handler_rec and comand_rec tables</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>Write the functions to initialise and
+  read the command data</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>Write the handler function</font></td>
+ </tr>
+</table>
+
+</p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0036.htm');">Linux 2000 module</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>module linux2000_module = {</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;STANDARD_MODULE_STUFF,</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;NULL,</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;linux2000_create_dir_config,</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;NULL,</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;NULL,</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;NULL,</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;linux2000_cmds,</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;linux2000_handler,</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;NULL</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>};</font></td>
+ </tr>
+</table>
+
+</p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0013.htm');">Handler_rec structure</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width=20 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=2><font face=Arial size=2>Handler table</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=2><font face=Arial size=2>Format</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>Content type (must be all lowercase)</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>Handler pointer</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=2><font face=Arial size=2>The handler function takes one
+  argument, a request_rec structure</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=2><font face=Arial size=2>The handler function returns an int,
+  which must be OK, DECLINED or an HTTP error message</font></td>
+ </tr>
+</table>
+
+</p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0014.htm');">Handler_rec example</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>handler_rec linux2000_handler[] = {</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2><span style="mso-spacerun: yes">       
+  </span>{ &quot;linux2000-handler&quot;, handler_linux2000 },</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2><span style="mso-spacerun: yes">       
+  </span>{ NULL }</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>};</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1></td>
+ </tr>
+</table>
+
+</p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0011.htm');">Command_rec structure</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width=20 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=2><font face=Arial size=2>Command table</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=2><font face=Arial size=2>Format:</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>Name</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>Function pointer</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>Extra data</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>Overrides (where the command can be
+  used)</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>Argument format</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>Usage message</font></td>
+ </tr>
+</table>
+
+</p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0012.htm');">Command_rec example</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>command_rec linux2000_cmds[] = {</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2><span style="mso-spacerun: yes">       
+  </span>{ &quot;linux2000Header&quot;, linux2000_header, NULL, ACCESS_CONF,
+  TAKE1,</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2><span style="mso-spacerun:
+  yes">          </span>&quot;Add a header text to each page&quot; },</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2><span style="mso-spacerun: yes">       
+  </span>{ &quot;linux2000Footer&quot;, linux2000_footer, NULL, ACCESS_CONF,
+  TAKE1,</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2><span style="mso-spacerun:
+  yes">          </span>&quot;Add a footer text to each page&quot; },</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2><span style="mso-spacerun: yes">       
+  </span>{ NULL }</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>};</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1></td>
+ </tr>
+</table>
+
+</p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0017.htm');">Linux 2000 Module</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width=20 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=2><font face=Arial size=2>Initialise</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>Module specific data structure
+  initialised when the per directory hook is called</font></td>
+ </tr>
+</table>
+
+</p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0019.htm');">Module handler</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>int handler_linux2000 (request_rec *r)</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>{</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;hf_rec *conf =
+  ap_get_module_config(r-&gt;per_dir_config,</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;&#9;&#9;&#9;&#9;<span
+  style="mso-spacerun: yes">   </span>&amp;linux2000_module);</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;r-&gt;content_type = “text/html”;</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;ap_table_add(r-&gt;headers_out,
+  &quot;X-Conference&quot;, &quot;Linux 2000&quot;);</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;ap_send_http_header(r);</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;if (conf-&gt;header) {</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;&#9;ap_rprintf(r, &quot;%s\n&quot;,
+  conf-&gt;header);</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;}</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&nbsp;&#9;ap_rputs(&quot;&lt;p&gt;&lt;center&gt;&lt;font
+  face=\&quot;arial\&quot;&gt;BODY DATA&lt;/font&gt;&lt;/cenber&gt;\n&quot;,
+  r);</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;if (conf-&gt;footer) {<br>
+  &#9;ap_rprintf(r, &quot;%s\n&quot;, conf-&gt;footer);</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;}</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&#9;return OK;</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>}</font></td>
+ </tr>
+</table>
+
+</p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0025.htm');">More API functions</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width=20 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=2><font face=Arial size=2>Module configuration:</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>ap_get_module_config();</font></td>
+ </tr>
+</table>
+
+</p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0029.htm');">Configuration</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&lt;Location /linux2000&gt;</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2><span style="mso-spacerun: yes">   
+  </span>SetHandler linux2000-handler</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2><span style="mso-spacerun: yes">   
+  </span>linux2000Header “&lt;html&gt;&lt;body bgcolor=red&gt;&quot;</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2><span style="mso-spacerun: yes">   
+  </span>linux2000Footer &quot;&lt;hr&gt;&lt;/body&gt;&lt;/html&gt;&quot;</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>&lt;/Location&gt;</font></td>
+ </tr>
+</table>
+
+</p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0030.htm');">Apache 2.0</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=1><font face=Arial size=2>MPM: Multiple-Processing Model</font></td>
+ </tr>
+</table>
+
+</p>
+
+<p><font face=Arial size=2><b><a
+href="javascript:parent.GoToSld('v3_slide0031.htm');">More Information</a></b></font>
+
+<table>
+ <tr>
+  <td width=5 nowrap></td>
+  <td width=20 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=2><font face=Arial size=2>&#9;Apache Modules Registry</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>&#9;&#9;http://modules.apache.org</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=2><font face=Arial size=2>&#9;Design Considerations for the
+  Apache API by Rob Thau</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>&#9;&#9;http://www5conf.inria.fr/fich_html/papers/P20/Overview.html</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=2><font face=Arial size=2>&#9;Overview of HTTP</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>&#9;&#9;http://www.w3.org/pub/WWW/Protocols</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=2><font face=Arial size=2>&#9;Apache Today</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>&#9;&#9;http://apachetoday.com</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=2><font face=Arial size=2>&#9; Apache Week</font></td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td colspan=1><font face=Arial size=2>&#9;&#9;http://www.apacheweek.com</font></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td colspan=2></td>
+ </tr>
+</table>
+
+</p>
+
+</body>
+
+</html>

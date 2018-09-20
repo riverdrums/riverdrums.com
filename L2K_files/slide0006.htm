@@ -1,0 +1,120 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 9">
+<link id=Main-File rel=Main-File href="../L2K.htm">
+<link rel=Preview href=preview.wmf>
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+p\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+v\:textbox {display:none;}
+</style>
+<![endif]-->
+<title>Modules and the Apache Web Server</title>
+<meta name=Description content="19-Dec-00: Request Handling">
+<link rel=Stylesheet href="master03_stylesheet.css">
+<![if !ppt]>
+
+<bgsound id=pptSound>
+
+<style media=print>
+<!--.sld
+	{left:0px !important;
+	width:6.0in !important;
+	height:4.5in !important;
+	font-size:107% !important;}
+-->
+</style>
+<script src=script.js></script><script><!--
+gId="slide0006.htm"
+if( !IsNts() ) Redirect( "PPTSld", gId );
+//-->
+</script><!--[if vml]><script>g_vml = 1;
+</script><![endif]--><script for=window event=onload><!--
+if( !IsSldOrNts() ) return;
+if( MakeNotesVis() ) return;
+LoadSld( gId );
+MakeSldVis(0);
+//-->
+</script><![endif]>
+</head>
+
+<body lang=EN-US style='margin:0px;background-color:white'
+onclick="DocumentOnClick()" onresize="_RSW()" onkeypress="_KPH()">
+
+<div id=SlideObj class=sld style='position:absolute;top:0px;left:0px;
+width:534px;height:400px;font-size:16px;background-color:white;clip:rect(0%, 101%, 101%, 0%);
+visibility:hidden'><p:slide coordsize="720,540"
+ colors="#FFFFFF,#000000,#808080,#000000,#00CC99,#3333CC,#CCCCFF,#B2B2B2"
+ masterhref="master03.xml">
+ <p:shaperange href="master03.xml#_x0000_s1025"/><![if !ppt]><p:shaperange
+  href="master03.xml#_x0000_s1028"/><p:shaperange
+  href="master03.xml#_x0000_s1029"/><![endif]><p:shaperange
+  href="master03.xml#_x0000_m1026"/><v:shape id="_x0000_s8194" type="#_x0000_m1026"
+  style='position:absolute;left:54pt;top:48pt;width:612pt;height:90pt'
+  o:userdrawn="f">
+  <v:fill o:detectmouseclick="f"/>
+  <v:stroke o:forcedash="f"/>
+  <o:lock v:ext="edit" text="f"/>
+  <p:placeholder type="title"/></v:shape><p:shaperange
+  href="master03.xml#_x0000_m1027"/><v:shape id="_x0000_s8195" type="#_x0000_m1027"
+  style='position:absolute;left:54pt;top:156pt;width:612pt;height:324pt'
+  o:userdrawn="f">
+  <v:fill o:detectmouseclick="f"/>
+  <v:stroke o:forcedash="f"/>
+  <o:lock v:ext="edit" text="f"/>
+  <p:placeholder type="body" position="1"/></v:shape>
+ <div v:shape="_x0000_s8194" class=T style='position:absolute;top:13.5%;
+ left:8.42%;width:83.14%;height:8.0%'><span style='font-size:86%;text-shadow:
+ auto'>Request Handling</span></div>
+ <div v:shape="_x0000_s8195">
+ <div class=B style='position:absolute;top:30.0%;left:8.42%;width:85.58%;
+ height:6.0%'><span style='position:absolute;top:0%;left:4.37%;width:95.62%'><span
+ style='font-size:88%'><span style='mso-special-format:bullet;position:absolute;
+ left:-4.57%'>•</span></span><span style='font-size:88%'>Requests are handled
+ in a number of phases&#13;</span></span></div>
+ <div class=B1 style='position:absolute;top:37.25%;left:13.48%;width:78.08%;
+ height:5.25%'><span style='position:absolute;top:0%;left:4.07%;width:96.16%'><span
+ style='font-size:86%'><span style='mso-special-format:bullet;position:absolute;
+ left:-4.23%'>–</span></span><span style='font-size:86%'>URI to filename
+ translation&#13;</span></span></div>
+ <div class=B1 style='position:absolute;top:43.5%;left:13.48%;width:78.08%;
+ height:5.25%'><span style='position:absolute;top:0%;left:4.07%;width:96.16%'><span
+ style='font-size:86%'><span style='mso-special-format:bullet;position:absolute;
+ left:-4.23%'>–</span></span><span style='font-size:86%'>Access control
+ phases&#13;</span></span></div>
+ <div class=B1 style='position:absolute;top:50.0%;left:13.48%;width:80.52%;
+ height:5.25%'><span style='position:absolute;top:0%;left:3.95%;width:96.04%'><span
+ style='font-size:86%'><span style='mso-special-format:bullet;position:absolute;
+ left:-4.11%'>–</span></span><span style='font-size:86%'>Determining MIME type
+ of the requested object&#13;</span></span></div>
+ <div class=B1 style='position:absolute;top:56.25%;left:13.48%;width:78.08%;
+ height:5.25%'><span style='position:absolute;top:0%;left:4.07%;width:96.16%'><span
+ style='font-size:86%'><span style='mso-special-format:bullet;position:absolute;
+ left:-4.23%'>–</span></span><span style='font-size:86%'>Sending data back to
+ the client&#13;</span></span></div>
+ <div class=B1 style='position:absolute;top:62.75%;left:13.48%;width:78.08%;
+ height:5.25%'><span style='position:absolute;top:0%;left:4.07%;width:96.16%'><span
+ style='font-size:86%'><span style='mso-special-format:bullet;position:absolute;
+ left:-4.23%'>–</span></span><span style='font-size:86%'>Logging the
+ request&#13;</span></span></div>
+ <div class=B><span style='position:absolute;top:69.5%;left:12.17%;width:92.13%'><span
+ style='font-size:88%'><span style='mso-special-format:bullet;position:absolute;
+ left:-4.06%'>•</span></span><span style='font-size:88%'>User code can elect to
+ handle any of these phases </span></span><span style='position:absolute;
+ top:75.5%;left:12.17%;width:79.4%'><span style='font-size:88%'>by declaring a
+ handler for that phase</span></span></div>
+ </div>
+</p:slide></div>
+
+</body>
+
+</html>

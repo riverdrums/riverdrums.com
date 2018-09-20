@@ -1,0 +1,193 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 9">
+<link id=Main-File rel=Main-File href="../L2K.htm">
+<link rel=Preview href=preview.wmf>
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+p\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+v\:textbox {display:none;}
+</style>
+<![endif]-->
+<title>Modules and the Apache Web Server</title>
+<meta name=Description content="19-Dec-00: API functions">
+<link rel=Stylesheet href="master03_stylesheet.css">
+<![if !ppt]>
+
+<bgsound id=pptSound>
+
+<style media=print>
+<!--.sld
+	{left:0px !important;
+	width:6.0in !important;
+	height:4.5in !important;
+	font-size:107% !important;}
+-->
+</style>
+<script src=script.js></script><script><!--
+gId="slide0018.htm"
+if( !IsNts() ) Redirect( "PPTSld", gId );
+//-->
+</script><!--[if vml]><script>g_vml = 1;
+</script><![endif]--><script for=window event=onload><!--
+if( !IsSldOrNts() ) return;
+if( MakeNotesVis() ) return;
+LoadSld( gId );
+InitBuildEffects();
+MakeSldVis(0);
+//-->
+</script><![endif]><o:shapelayout v:ext="edit">
+ <o:idmap v:ext="edit" data="20"/>
+</o:shapelayout>
+</head>
+
+<body lang=EN-US style='margin:0px;background-color:white'
+onclick="DocumentOnClick()" onresize="_RSW()" onkeypress="_KPH()">
+
+<div id=SlideObj class=sld style='position:absolute;top:0px;left:0px;
+width:534px;height:400px;font-size:16px;background-color:white;clip:rect(0%, 101%, 101%, 0%);
+visibility:hidden'><p:slide coordsize="720,540"
+ colors="#FFFFFF,#000000,#808080,#000000,#00CC99,#3333CC,#CCCCFF,#B2B2B2"
+ masterhref="master03.xml">
+ <p:shaperange href="master03.xml#_x0000_s1025"/><![if !ppt]><p:shaperange
+  href="master03.xml#_x0000_s1028"/><p:shaperange
+  href="master03.xml#_x0000_s1029"/><![endif]><p:shaperange
+  href="master03.xml#_x0000_m1026"/><v:shape id="_x0000_s20482" type="#_x0000_m1026"
+  style='position:absolute;left:54pt;top:48pt;width:612pt;height:90pt'
+  o:userdrawn="f">
+  <v:fill o:detectmouseclick="f"/>
+  <v:stroke o:forcedash="f"/>
+  <o:lock v:ext="edit" text="f"/>
+  <p:placeholder type="title"/></v:shape>
+ <div v:shape="_x0000_s20482" class=T style='position:absolute;top:13.5%;
+ left:8.42%;width:83.14%;height:8.0%'><span style='font-size:86%;text-shadow:
+ auto'>API functions</span></div>
+ <![if !ppt]>
+ <div style='visibility:hidden'><![endif]><p:shaperange
+  href="master03.xml#_x0000_m1027"/><v:shape id="_x0000_s20483" type="#_x0000_m1027"
+  style='position:absolute;left:54pt;top:126pt;width:618pt;height:1in'
+  o:userdrawn="f">
+  <v:fill o:detectmouseclick="f"/>
+  <v:stroke o:forcedash="f"/>
+  <o:lock v:ext="edit" text="f"/>
+  <p:placeholder type="body" position="1"/><p:animation number="1" delay="0"
+   type="text" level="1" effect="cut" direction="noBlack" flag="1024"/></v:shape><![if !ppt]></div>
+ <![endif]><![if !ppt]>
+ <div style='position:absolute;top:23.25%;left:7.49%;width:86.14%;height:13.75%'><![endif]>
+ <div v:shape="_x0000_s20483">
+ <div style='position:absolute;top:9.09%;left:1.08%;width:97.6%;height:83.63%;
+ overflow:hidden;visibility:hidden;mso-build:200;mso-build-order:1'>
+ <div class=B style='position:absolute;top:0%;left:0%;width:100.0%;height:52.17%'><span
+ style='position:absolute;top:0%;left:4.45%;width:95.32%'><span
+ style='font-size:88%'><span style='mso-special-format:bullet;position:absolute;
+ left:-4.67%'>•</span></span><span style='font-size:88%'>Setting Content
+ Type&#13;</span></span></div>
+ <div class=B1 style='position:absolute;top:56.52%;left:6.01%;width:93.98%;
+ height:41.3%'><span style='position:absolute;top:0%;left:4.02%;width:95.97%'><span
+ style='font-family:Tahoma;font-size:71%'><span style='mso-special-format:bullet;
+ position:absolute;left:-4.19%'>–</span></span><span style='font-family:Tahoma;
+ font-size:71%'>r-&gt;content_type = “text/html”;</span></span></div>
+ </div>
+ </div>
+ <![if !ppt]></div>
+ <![endif]><![if !ppt]>
+ <div style='visibility:hidden'><![endif]><v:shapetype id="_x0000_t202"
+  coordsize="21600,21600" o:spt="202" path="m0,0l0,21600,21600,21600,21600,0xe">
+  <v:stroke joinstyle="miter"/>
+  <v:path gradientshapeok="t" o:connecttype="rect"/>
+ </v:shapetype><v:shape id="_x0000_s20485" type="#_x0000_t202" style='position:absolute;
+  left:54pt;top:3in;width:600pt;height:63.875pt' filled="f" fillcolor="#0c9 [4]"
+  stroked="f" strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="gray [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+  <p:animation number="2" delay="0" type="object" effect="cut"
+   direction="noBlack" flag="17408"/></v:shape><![if !ppt]></div>
+ <![endif]><![if !ppt]>
+ <div style='position:absolute;top:40.0%;left:7.49%;width:83.7%;height:12.25%'><![endif]>
+ <div v:shape="_x0000_s20485" style='position:absolute;top:4.08%;left:1.11%;
+ width:97.31%;height:89.79%;overflow:hidden;visibility:hidden;mso-build:200;
+ mso-build-order:2'>
+ <div class=O style='mso-line-spacing:"90 20 0";position:absolute;top:0%;
+ left:0%;width:100.0%;height:54.54%'><span style='position:absolute;top:0%;
+ left:1.83%;width:98.39%'><span style='font-size:117%'><span style='mso-special-format:
+ bullet;position:absolute;left:-1.86%'>•</span></span><span style='font-size:
+ 117%'><span style="mso-spacerun: yes">  </span>Sending Headers&#13;</span></span></div>
+ <div class=O1 style='mso-line-spacing:"90 20 0";position:absolute;top:56.81%;
+ left:6.2%;width:93.79%;height:43.18%'><span style='position:absolute;
+ top:0%;left:1.96%;width:98.03%'><span style='font-family:Tahoma;font-size:
+ 83%'><span style='mso-special-format:bullet;position:absolute;left:-2.0%;
+ top:.82em'>–</span></span><span style='font-family:Tahoma;font-size:83%'><span
+ style="mso-spacerun: yes">  </span>ap_send_http_header(r);</span><span
+ style='font-size:158%;text-shadow:auto;mso-special-format:lastCR;display:none'>&#13;</span></span></div>
+ </div>
+ <![if !ppt]></div>
+ <![endif]><![if !ppt]>
+ <div style='visibility:hidden'><![endif]><v:shape id="_x0000_s20486" type="#_x0000_t202"
+  style='position:absolute;left:54pt;top:300pt;width:505.25pt;height:63.875pt'
+  filled="f" fillcolor="#0c9 [4]" stroked="f" strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="gray [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+  <p:animation number="3" delay="0" type="object" effect="cut"
+   direction="noBlack" flag="17408"/></v:shape><![if !ppt]></div>
+ <![endif]><![if !ppt]>
+ <div style='position:absolute;top:55.5%;left:7.49%;width:70.41%;height:12.25%'><![endif]>
+ <div v:shape="_x0000_s20486" style='position:absolute;top:4.08%;left:1.32%;
+ width:97.07%;height:89.79%;overflow:hidden;visibility:hidden;mso-build:200;
+ mso-build-order:3'>
+ <div class=O style='mso-line-spacing:"90 20 0";position:absolute;top:0%;
+ left:0%;width:100.0%;height:54.54%'><span style='position:absolute;top:0%;
+ left:2.19%;width:98.08%'><span style='font-size:117%'><span style='mso-special-format:
+ bullet;position:absolute;left:-2.23%'>•</span></span><span style='font-size:
+ 117%'><span style="mso-spacerun: yes">  </span>Formatting string output&#13;</span></span></div>
+ <div class=O1 style='mso-line-spacing:"90 20 0";position:absolute;top:56.81%;
+ left:7.39%;width:92.6%;height:43.18%'><span style='position:absolute;
+ top:0%;left:2.36%;width:97.63%'><span style='font-family:Tahoma;font-size:
+ 83%'><span style='mso-special-format:bullet;position:absolute;left:-2.42%'>–</span></span><span
+ style='font-family:Tahoma;font-size:83%'><span style="mso-spacerun: yes"> 
+ </span>ap_rprintf(r, “%s”, string);</span></span></div>
+ </div>
+ <![if !ppt]></div>
+ <![endif]><![if !ppt]>
+ <div style='visibility:hidden'><![endif]><v:shape id="_x0000_s20487" type="#_x0000_t202"
+  style='position:absolute;left:54pt;top:390pt;width:6in;height:63.875pt'
+  filled="f" fillcolor="#0c9 [4]" stroked="f" strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="gray [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+  <p:animation number="4" delay="0" type="object" effect="cut"
+   direction="noBlack" flag="17408"/></v:shape><![if !ppt]></div>
+ <![endif]><![if !ppt]>
+ <div style='position:absolute;top:72.25%;left:7.49%;width:60.29%;height:12.25%'><![endif]>
+ <div v:shape="_x0000_s20487" style='position:absolute;top:4.08%;left:1.55%;
+ width:96.58%;height:89.79%;overflow:hidden;visibility:hidden;mso-build:200;
+ mso-build-order:4'>
+ <div class=O style='mso-line-spacing:"90 20 0";position:absolute;top:0%;
+ left:0%;width:100.0%;height:54.54%'><span style='position:absolute;top:0%;
+ left:2.57%;width:97.42%'><span style='font-size:117%'><span style='mso-special-format:
+ bullet;position:absolute;left:-2.64%'>•</span></span><span style='font-size:
+ 117%'><span style="mso-spacerun: yes">  </span>String output&#13;</span></span></div>
+ <div class=O1 style='mso-line-spacing:"90 20 0";position:absolute;top:56.81%;
+ left:8.68%;width:91.31%;height:43.18%'><span style='position:absolute;
+ top:0%;left:2.81%;width:97.18%'><span style='font-family:Tahoma;font-size:
+ 83%'><span style='mso-special-format:bullet;position:absolute;left:-2.89%;
+ top:.82em'>–</span></span><span style='font-family:Tahoma;font-size:83%'><span
+ style="mso-spacerun: yes">  </span>ap_rputs(“Hello”, r);</span><span
+ style='font-size:158%;text-shadow:auto;mso-special-format:lastCR;display:none'>&#13;</span></span></div>
+ </div>
+ <![if !ppt]></div>
+ <![endif]></p:slide></div>
+
+</body>
+
+</html>

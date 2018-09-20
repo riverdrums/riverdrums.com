@@ -1,0 +1,158 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 9">
+<link id=Main-File rel=Main-File href="../L2K.htm">
+<link rel=Preview href=preview.wmf>
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+p\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+v\:textbox {display:none;}
+</style>
+<![endif]-->
+<title>Modules and the Apache Web Server</title>
+<meta name=Description content="19-Dec-00: HTTP Header">
+<link rel=next href="v3_slide0026.htm">
+<![if !ppt]>
+<script>
+<!--
+function Update()
+{
+  if( window.name == "PPTSld" )
+    parent.SlideUpdated('v3_slide0024.htm');   
+  else
+    parent.location.href = "v3_document.htm";
+}
+
+function NoHref() {}
+//-->
+</script>
+<![endif]>
+</head>
+
+<body bgcolor=white alink="#3333cc" link="#ccccff" vlink="#b2b2b2" text=black
+topmargin=0 leftmargin=0 onload="Update()">
+
+<table border=0 valign=top width=475 height=356 cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=40 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=32 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=88 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=110 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=47 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=40 height=0 nowrap><img src="v3_space.gif" border=0></td>
+ </tr>
+ <tr>
+  <td width=475 height=48 colspan=7></td>
+ </tr>
+ <tr>
+  <td width=160 height=29 colspan=3></td>
+  <td width=157 height=29 colspan=2>
+  <table border=0 valign=top cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=157 height=29 align=center><font face="Times New Roman" size=5>HTTP
+    Header</font><br>
+    </td>
+   </tr>
+  </table>
+  </td>
+  <td width=158 height=29 colspan=2></td>
+ </tr>
+ <tr>
+  <td width=475 height=28 colspan=7></td>
+ </tr>
+ <tr>
+  <td width=40 height=43></td>
+  <td width=230 height=43 colspan=3>
+  <table border=0 valign=top cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=186 height=0 nowrap><img src="v3_space.gif" border=0></td>
+   </tr>
+   <tr>
+    <td width=230 height=20 colspan=2><font face=Tahoma size=2>r-&gt;content_type
+    = “text/html”;</font><br>
+    </td>
+   </tr>
+   <tr>
+    <td width=230 height=3 colspan=2></td>
+   </tr>
+   <tr>
+    <td width=186 height=20><font face=Tahoma size=2>ap_send_http_header(r);</font><br>
+    </td>
+    <td width=44 height=20></td>
+   </tr>
+  </table>
+  </td>
+  <td width=205 height=43 colspan=3></td>
+ </tr>
+ <tr>
+  <td width=475 height=32 colspan=7></td>
+ </tr>
+ <tr>
+  <td width=72 height=111 colspan=2></td>
+  <td width=285 height=111 colspan=4>
+  <table border=0 valign=top cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=129 height=0 nowrap><img src="v3_space.gif" border=0></td>
+    <td width=1 height=0 nowrap><img src="v3_space.gif" border=0></td>
+    <td width=48 height=0 nowrap><img src="v3_space.gif" border=0></td>
+    <td width=38 height=0 nowrap><img src="v3_space.gif" border=0></td>
+   </tr>
+   <tr>
+    <td width=129 height=20><font face=Tahoma color="#006600" size=2>HTTP/1.1
+    200 OK</font><br>
+    </td>
+    <td width=156 height=20 colspan=4></td>
+   </tr>
+   <tr>
+    <td width=285 height=3 colspan=5></td>
+   </tr>
+   <tr>
+    <td width=285 height=20 colspan=5><font face=Tahoma color="#006600" size=2>Date:
+    Tue, 31 Oct 2000 13:06:40 GMT</font><br>
+    </td>
+   </tr>
+   <tr>
+    <td width=285 height=3 colspan=5></td>
+   </tr>
+   <tr>
+    <td width=216 height=20 colspan=4><font face=Tahoma color="#006600" size=2>Server:
+    Apache/1.3.14 (Unix)</font><br>
+    </td>
+    <td width=69 height=20></td>
+   </tr>
+   <tr>
+    <td width=285 height=2 colspan=5></td>
+   </tr>
+   <tr>
+    <td width=130 height=20 colspan=2><font face=Tahoma color="#006600" size=2>Connection:
+    close</font><br>
+    </td>
+    <td width=155 height=20 colspan=3></td>
+   </tr>
+   <tr>
+    <td width=285 height=3 colspan=5></td>
+   </tr>
+   <tr>
+    <td width=178 height=20 colspan=3><font face=Tahoma color="#006600" size=2>Content-Type:
+    text/html</font><br>
+    </td>
+    <td width=107 height=20 colspan=2></td>
+   </tr>
+  </table>
+  </td>
+  <td width=118 height=111></td>
+ </tr>
+ <tr>
+  <td width=475 height=65 colspan=7></td>
+ </tr>
+</table>
+
+</body>
+
+</html>

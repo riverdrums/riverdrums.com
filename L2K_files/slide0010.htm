@@ -1,0 +1,180 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 9">
+<link id=Main-File rel=Main-File href="../L2K.htm">
+<link rel=Preview href=preview.wmf>
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+p\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+v\:textbox {display:none;}
+</style>
+<![endif]-->
+<title>Modules and the Apache Web Server</title>
+<meta name=Description content="19-Dec-00: Module Structure (cont)">
+<link rel=Stylesheet href="master03_stylesheet.css">
+<![if !ppt]>
+
+<bgsound id=pptSound>
+
+<style media=print>
+<!--.sld
+	{left:0px !important;
+	width:6.0in !important;
+	height:4.5in !important;
+	font-size:107% !important;}
+-->
+</style>
+<script src=script.js></script><script><!--
+gId="slide0010.htm"
+if( !IsNts() ) Redirect( "PPTSld", gId );
+//-->
+</script><!--[if vml]><script>g_vml = 1;
+</script><![endif]--><script for=window event=onload><!--
+if( !IsSldOrNts() ) return;
+if( MakeNotesVis() ) return;
+LoadSld( gId );
+MakeSldVis(0);
+//-->
+</script><![endif]><o:shapelayout v:ext="edit">
+ <o:idmap v:ext="edit" data="12"/>
+</o:shapelayout>
+</head>
+
+<body lang=EN-US style='margin:0px;background-color:white'
+onclick="DocumentOnClick()" onresize="_RSW()" onkeypress="_KPH()">
+
+<div id=SlideObj class=sld style='position:absolute;top:0px;left:0px;
+width:534px;height:400px;font-size:16px;background-color:white;clip:rect(0%, 101%, 101%, 0%);
+visibility:hidden'><p:slide coordsize="720,540"
+ colors="#FFFFFF,#000000,#808080,#000000,#00CC99,#3333CC,#CCCCFF,#B2B2B2"
+ masterhref="master03.xml">
+ <p:shaperange href="master03.xml#_x0000_s1025"/><![if !ppt]><p:shaperange
+  href="master03.xml#_x0000_s1028"/><p:shaperange
+  href="master03.xml#_x0000_s1029"/><![endif]><p:shaperange
+  href="master03.xml#_x0000_m1026"/><v:shape id="_x0000_s12290" type="#_x0000_m1026"
+  style='position:absolute;left:54pt;top:48pt;width:612pt;height:66pt'
+  o:userdrawn="f">
+  <v:fill o:detectmouseclick="f"/>
+  <v:stroke o:forcedash="f"/>
+  <o:lock v:ext="edit" text="f"/>
+  <p:placeholder type="title"/></v:shape><p:shaperange
+  href="master03.xml#_x0000_m1027"/><v:shape id="_x0000_s12291" type="#_x0000_m1027"
+  style='position:absolute;left:48pt;top:108pt;width:618pt;height:372pt'
+  o:userdrawn="f">
+  <v:fill o:detectmouseclick="f"/>
+  <v:stroke o:forcedash="f"/>
+  <o:lock v:ext="edit" text="f"/>
+  <p:placeholder type="body" position="1"/></v:shape>
+ <div v:shape="_x0000_s12290" class=T style='position:absolute;top:11.25%;
+ left:8.42%;width:83.14%;height:8.0%'><span style='font-size:86%;text-shadow:
+ auto'>Module Structure (cont)</span></div>
+ <div v:shape="_x0000_s12291" class=B>
+ <div style='mso-line-spacing:"90 20 0";position:absolute;top:20.75%;
+ left:7.67%;width:84.08%;height:3.5%'><span style='mso-special-format:nobullet;
+ display:none'>•</span><span style='mso-fareast-font-family:"Times New Roman";
+ mso-hansi-font-family:"Times New Roman";font-size:50%'><span style='mso-tab-count:
+ 2;width:11.89%'> </span>/* translate handler */&#13;</span></div>
+ <div style='mso-line-spacing:"90 20 0";position:absolute;top:24.5%;left:7.67%;
+ width:84.08%;height:3.5%'><span style='mso-special-format:nobullet;display:
+ none'>•</span><span style='mso-fareast-font-family:"Times New Roman";
+ mso-hansi-font-family:"Times New Roman";font-size:50%'><span style='mso-tab-count:
+ 2;width:11.89%'> </span>/* check user id */&#13;</span></div>
+ <div style='mso-line-spacing:"90 20 0";position:absolute;top:28.5%;left:7.67%;
+ width:84.08%;height:3.5%'><span style='mso-special-format:nobullet;display:
+ none'>•</span><span style='mso-fareast-font-family:"Times New Roman";
+ mso-hansi-font-family:"Times New Roman";font-size:50%'><span style='mso-tab-count:
+ 2;width:11.89%'> </span>/* auth checker */&#13;</span></div>
+ <div style='mso-line-spacing:"90 20 0";position:absolute;top:32.5%;left:7.67%;
+ width:84.08%;height:3.5%'><span style='mso-special-format:nobullet;display:
+ none'>•</span><span style='mso-fareast-font-family:"Times New Roman";
+ mso-hansi-font-family:"Times New Roman";font-size:50%'><span style='mso-tab-count:
+ 2;width:11.89%'> </span>/* access checker */&#13;</span></div>
+ <div style='mso-line-spacing:"90 20 0";position:absolute;top:36.25%;
+ left:7.67%;width:84.08%;height:3.5%'><span style='mso-special-format:nobullet;
+ display:none'>•</span><span style='mso-fareast-font-family:"Times New Roman";
+ mso-hansi-font-family:"Times New Roman";font-size:50%'><span style='mso-tab-count:
+ 2;width:11.89%'> </span>/* type checker */&#13;</span></div>
+ <div style='mso-line-spacing:"90 20 0";position:absolute;top:40.25%;
+ left:7.67%;width:84.08%;height:3.5%'><span style='mso-special-format:nobullet;
+ display:none'>•</span><span style='mso-fareast-font-family:"Times New Roman";
+ mso-hansi-font-family:"Times New Roman";font-size:50%'><span style='mso-tab-count:
+ 2;width:11.89%'> </span>/* fixups */&#13;</span></div>
+ <div style='mso-line-spacing:"90 20 0";position:absolute;top:44.25%;
+ left:7.67%;width:84.08%;height:3.5%'><span style='mso-special-format:nobullet;
+ display:none'>•</span><span style='mso-fareast-font-family:"Times New Roman";
+ mso-hansi-font-family:"Times New Roman";font-size:50%'><span style='mso-tab-count:
+ 2;width:11.89%'> </span>/* logger */&#13;</span></div>
+ <div style='mso-line-spacing:"90 20 0";position:absolute;top:48.25%;
+ left:7.67%;width:84.08%;height:3.5%'><span style='mso-special-format:nobullet;
+ display:none'>•</span><span style='mso-fareast-font-family:"Times New Roman";
+ mso-hansi-font-family:"Times New Roman";font-size:50%'><span style='mso-tab-count:
+ 2;width:11.89%'> </span>/* header parser */&#13;</span></div>
+ <div style='mso-line-spacing:"90 20 0";position:absolute;top:52.0%;left:7.67%;
+ width:84.08%;height:3.5%'><span style='mso-special-format:nobullet;display:
+ none'>•</span><span style='mso-fareast-font-family:"Times New Roman";
+ mso-hansi-font-family:"Times New Roman";font-size:50%'><span style='mso-tab-count:
+ 2;width:11.89%'> </span>/* child init */&#13;</span></div>
+ <div style='mso-line-spacing:"90 20 0";position:absolute;top:56.0%;left:7.67%;
+ width:84.08%;height:3.5%'><span style='mso-special-format:nobullet;display:
+ none'>•</span><span style='mso-fareast-font-family:"Times New Roman";
+ mso-hansi-font-family:"Times New Roman";font-size:50%'><span style='mso-tab-count:
+ 2;width:11.89%'> </span>/* child exit */&#13;</span></div>
+ <div style='mso-line-spacing:"90 20 0";position:absolute;top:60.0%;left:7.67%;
+ width:84.08%;height:3.5%'><span style='mso-special-format:nobullet;display:
+ none'>•</span><span style='mso-fareast-font-family:"Times New Roman";
+ mso-hansi-font-family:"Times New Roman";font-size:50%'><span style='mso-tab-count:
+ 2;width:11.89%'> </span>/* post read request */&#13;</span></div>
+ <div style='mso-line-spacing:"90 20 0";position:absolute;top:64.0%;left:7.67%;
+ width:84.08%;height:3.5%'><span style='mso-special-format:nobullet;display:
+ none'>•</span><span style='mso-fareast-font-family:"Times New Roman";
+ mso-hansi-font-family:"Times New Roman";font-size:50%'><span style='mso-tab-count:
+ 2;width:11.89%'> </span>/* add module */&#13;</span></div>
+ <div style='mso-line-spacing:"90 20 0";position:absolute;top:67.75%;
+ left:7.67%;width:84.08%;height:3.5%'><span style='mso-special-format:nobullet;
+ display:none'>•</span><span style='mso-fareast-font-family:"Times New Roman";
+ mso-hansi-font-family:"Times New Roman";font-size:50%'><span style='mso-tab-count:
+ 2;width:11.89%'> </span>/* remove<span style="mso-spacerun: yes"> 
+ </span>module */&#13;</span></div>
+ <div style='mso-line-spacing:"90 20 0";position:absolute;top:71.75%;
+ left:7.67%;width:84.08%;height:3.5%'><span style='mso-special-format:nobullet;
+ display:none'>•</span><span style='mso-fareast-font-family:"Times New Roman";
+ mso-hansi-font-family:"Times New Roman";font-size:50%'><span style='mso-tab-count:
+ 2;width:11.89%'> </span>/* rewrite command */&#13;</span></div>
+ <div style='mso-line-spacing:"90 20 0";position:absolute;top:75.75%;
+ left:7.67%;width:84.08%;height:3.5%'><span style='mso-special-format:nobullet;
+ display:none'>•</span><span style='mso-fareast-font-family:"Times New Roman";
+ mso-hansi-font-family:"Times New Roman";font-size:50%'><span style='mso-tab-count:
+ 2;width:11.89%'> </span>/* new connection */&#13;</span></div>
+ <div style='mso-line-spacing:"90 20 0";position:absolute;top:79.75%;
+ left:7.67%;width:84.08%;height:3.5%'><span style='mso-special-format:nobullet;
+ display:none'>•</span><span style='mso-fareast-font-family:"Times New Roman";
+ mso-hansi-font-family:"Times New Roman";font-size:50%'><span style='mso-tab-count:
+ 2;width:11.89%'> </span>/* close connection */&#13;</span></div>
+ <div style='mso-line-spacing:"90 20 0";position:absolute;top:83.5%;left:7.67%;
+ width:84.08%;height:3.5%'><span style='mso-special-format:nobullet;display:
+ none'>•</span><span style='mso-fareast-font-family:"Times New Roman";
+ mso-hansi-font-family:"Times New Roman";font-size:50%'><span style='mso-tab-count:
+ 1;width:4.46%'> </span>};&#13;</span></div>
+ <div style='mso-line-spacing:"90 20 0";position:absolute;top:87.5%;left:7.67%;
+ width:84.08%;height:3.5%'><span style='mso-special-format:nobullet;display:
+ none'>•</span><span style='mso-hansi-font-family:"Times New Roman";font-size:
+ 50%;display:none'>&#13;</span></div>
+ <div style='mso-line-spacing:"90 20 0";position:absolute;top:92.25%;
+ left:7.67%;width:84.08%;height:7.5%'><span style='mso-special-format:nobullet;
+ display:none'>•</span><span style='font-size:113%;mso-special-format:lastCR;
+ display:none'>&#13;</span></div>
+ </div>
+</p:slide></div>
+
+</body>
+
+</html>
