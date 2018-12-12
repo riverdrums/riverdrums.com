@@ -14,10 +14,11 @@ h2 {
 }
 
 table { margin-left: auto; margin-right: auto; }
-.center { text-align: center; }
 td { font-size: 13pt; font-weight: normal; text-align: center; letter-spacing: 0.04em; }
-td.music { font-size: 13pt; font-weight: normal; text-align: left; letter-spacing: 0.04em; }
-td.year { font-size: 11pt; text-align: left; }
+.center { text-align: center; }
+.empty { font-size: 1px; height: 10px; }
+.music { font-size: 13pt; font-weight: normal; text-align: left; letter-spacing: 0.04em; }
+.year { color: rgb(255,255,240); font-size: 12pt; text-align: left; padding-right: 10px; }
 
 table td.title {
   font-size: 13pt; 
@@ -41,7 +42,5 @@ a:hover {
   padding: 7px 6px 7px 6px;
   border: 1px solid rgb(190,240,255);
 }
-
-.empty { font-size: 1px; height: 10px; }
 
 hr { border: 0; height: 1px; width: 95%; background-color: rgb(120,120,120); color: rgb(120,120,120); }
