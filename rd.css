@@ -16,6 +16,7 @@ h2 {
 table { margin-left: auto; margin-right: auto; }
 .center { text-align: center; }
 td { font-size: 13pt; font-weight: normal; text-align: center; letter-spacing: 0.04em; }
+td.music { font-size: 13pt; font-weight: normal; text-align: left; letter-spacing: 0.04em; }
 
 table td.title {
   font-size: 13pt; 
