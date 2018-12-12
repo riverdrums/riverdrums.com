@@ -15,12 +15,11 @@ h2 {
 
 table { margin-left: auto; margin-right: auto; }
 td { font-size: 13pt; font-weight: normal; text-align: center; letter-spacing: 0.04em; }
+span { display: inline-block; }
 .center { text-align: center; }
 .empty { font-size: 1px; height: 10px; }
-.music { font-size: 13pt; font-weight: normal; text-align: left; letter-spacing: 0.04em; }
+.music { font-size: 13pt; font-weight: normal; text-align: left; letter-spacing: 0.04em; display: block; }
 .year { color: rgb(140,0,60); font-size: 12pt; text-align: left; padding-right: 10px; }
-div { padding-bottom: 10px; display: block; }
-span { display: inline-block; }
 
 table td.title {
   font-size: 13pt; 
