@@ -1,0 +1,4 @@
+RewriteEngine on
+
+RewriteCond %{HTTP_REFERER} !.*blogspot.com.* [NC]
+RewriteRule .* - [F]
