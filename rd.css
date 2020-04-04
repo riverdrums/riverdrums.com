@@ -5,7 +5,7 @@ body {
 }
 
 h2 { 
-  font-size: 35pt; 
+  font-size: 290%;
   font-weight: normal; 
   color: rgb(140,0,60); 
   background-color: rgb(255,255,240); 
@@ -14,18 +14,18 @@ h2 {
 }
 
 table { margin-left: auto; margin-right: auto; }
-td { font-size: 13pt; font-weight: normal; text-align: center; letter-spacing: 0.04em; }
+td { font-size: 108%; font-weight: normal; text-align: center; letter-spacing: 0.04em; }
 span { display: inline-block; }
 .center { text-align: center; }
 .left { text-align: left; }
 .empty { font-size: 1px; height: 10px; }
-.music { font-size: 13pt; font-weight: normal; text-align: left; letter-spacing: 0.04em; padding-right: 10px; width: 140px; }
+.music { font-size: 100%; font-weight: normal; text-align: left; letter-spacing: 0.04em; padding-right: 10px; width: 140px; }
 .year { color: rgb(140,0,60); font-size: 12pt; text-align: right; padding-right: 10px; padding-left: 10px; }
 
 .music a { width: 100%; display: inline-block; }
 
 table td.title {
-  font-size: 13pt; 
+  font-size: 108%; 
   font-weight: normal; 
   text-align: center; 
   letter-spacing: 0.5em; 
