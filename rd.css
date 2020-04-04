@@ -20,9 +20,8 @@ span { display: inline-block; }
 .left { text-align: left; }
 .empty { font-size: 1px; height: 10px; }
 .music { font-size: 100%; font-weight: normal; text-align: left; letter-spacing: 0.04em; padding-right: 10px; width: 140px; }
-.year { color: rgb(140,0,60); font-size: 12pt; text-align: right; padding-right: 10px; padding-left: 10px; }
-
 .music a { width: 100%; display: inline-block; }
+.year { color: rgb(140,0,60); font-size: 12pt; text-align: right; padding-right: 10px; padding-left: 10px; }
 
 table td.title {
   font-size: 108%; 
@@ -32,7 +31,7 @@ table td.title {
   color: rgb(120,120,120);
 }
 
-a, a:active, a:hover a:visited { 
+a, a:active, a:visited { 
   color: rgb(50,150,255); 
   background-color: rgb(255,255,240); 
   text-decoration: none; 
