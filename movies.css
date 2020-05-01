@@ -1,0 +1,93 @@
+@import url("rd.css");
+
+/* Movies */
+table.movies { 
+  width: 25%; 
+  border-collapse: collapse;
+  margin-bottom: 40px;
+}
+table.movies td.title { 
+  font-size: 108%; 
+  font-weight: bold;
+  text-align: center; 
+  letter-spacing: 0.3em; 
+  color: rgb(120,120,120);
+}
+table.movies td { 
+  border: 1px solid black; 
+  text-align: left; 
+  vertical-align: top; 
+  padding-left: 10px;
+}
+table.movies td.right {
+  border; 0;
+  text-align: right; 
+  vertical-align: top; 
+  padding-right: 10px;
+  width: 10%;
+}
+
+div.index { 
+  text-align: left; 
+  /* display: inline-block;  */
+}
+div.index ul, div.index ul li { padding: 0; margin: 0; }
+div.index ul li a, div.index ul li a:active, div.index li a:visited { 
+  color: rgb(50,150,255); 
+  background-color: rgb(255,255,240); 
+  text-decoration: none; 
+  padding: 3px 3px 3px 3px;
+  display: block;
+}
+div.index ul li a:hover { 
+  color: rgb(50,120,255); 
+  background-color: rgb(255,255,235); 
+  padding: 2px 2px 2px 2px;
+  border: 1px solid rgb(190,240,255);
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  /* color: rgb(50,120,255);  */
+  color: rgb(140,0,60); 
+  background-color: rgb(255,255,235);
+  cursor: pointer;
+  padding: 10px 18px;
+  width: 100%;
+  border: 1px solid rgb(190,240,255);
+  outline: none;
+  font-size: 25px;
+  text-align: center;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  color: rgb(140,0,60); 
+  background-color: rgb(255,255,240); 
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.index {
+  background-color: rgb(255,255,240); 
+  padding-left: 10px;
+  display: none;
+  overflow: hidden;
+}
+
+.collapsible:after {
+  content: '\02795';
+  float: right;
+  font-size: 13px;
+  color: rgb(140,0,60); 
+  margin-left: 5px;
+}
+.collapsible:before {
+  content: '\02795';
+  float: left;
+  font-size: 13px;
+  color: rgb(140,0,60); 
+  margin-right: 5px;
+}
+
+.active:after { content: "\2796"; color: rgb(140,0,60); }
+.active:before { content: "\2796"; color: rgb(140,0,60); }
