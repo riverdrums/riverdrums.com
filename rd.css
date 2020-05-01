@@ -23,7 +23,7 @@ span { display: inline-block; }
 .music a { width: 100%; display: inline-block; }
 .year { color: rgb(140,0,60); font-size: 12pt; text-align: right; padding-right: 10px; padding-left: 10px; }
 
-table td.title {
+table tr td.title {
   font-size: 108%; 
   font-weight: normal; 
   text-align: center; 
