@@ -1,8 +1,38 @@
-body { font-family: "DejaVu Sans",Tahoma,Arial,Helvetica,sans-serif; background-color: rgb(255,255,254); }
+:root {
+    --bg: rgb(251,244,247);
+    --bd: rgb(245,230,237);
+    --header: rgb(143,57,97);
+    --header-fg: rgb(129,52,88);
+
+    --menu-fg: rgb(200,200,200);
+    --menu-bg: rgb(255,255,255);
+
+    --body: rgb(87,35,59);
+    --skills: rgb(45,18,31);
+
+    --ref: rgb(100,80,60);
+    --ref-hover: rgb(0,102,255);
+}
+
+body { 
+  /* font-family: "DejaVu Sans",Tahoma,Arial,Helvetica,sans-serif;  */
+  font-family: Arial,"Times New Roman",Helvetica,sans-serif;
+  background-color: var(--bg);
+  color: rgb(0, 0, 0);
+}
 h1, h2, .menu { text-align: center; }
 h1 { font-size: 15pt; font-weight: normal; margin-bottom: 0; }
-h2 { font-size: 10pt; font-weight: bold; color: rgb(40,40,40); margin: 15px; }
 ul, li { text-align: left; padding: 0; margin-bottom: 2px; }
+
+h2 { 
+  font-size: 130%;
+  font-weight: bold; 
+  color: var(--header);
+  background-color: var(--bg);
+  margin: 15px;
+  letter-spacing: 0.03em;
+}
+
 
 table { 
   empty-cells: show; 
@@ -12,82 +42,83 @@ table {
   text-align: center;
 }
 table.inner { width: 600px; }
-table.menu { border-spacing: 0; padding: 0; }
+table.menu { border-spacing: 0; padding: 0; padding-bottom: 20px; }
 table.simple { padding: 0; margin: 0; border-spacing: 2px; }
 
 td {
   font-size: 10pt;
   text-decoration: none;
   text-align: left;
-  border: 1px solid rgb(240,240,240);
+  border: 1px solid var(--bd);
+  background: var(--bg);
   padding: 2px;
 }
 td.empty { border: none; width: 5%; padding: 0; }
 
-.date { font-weight: normal; font-size: 8pt; padding-left: 8px; }
+
+.date { font-weight: normal; font-size: 80%; padding-left: 8px; }
+
+.intro {
+  font-size: 95%;
+  font-weight: normal;
+  padding: 15px 50px 15px 50px;
+  text-align: justify;
+  color: var(--header);
+  background: var(--bd);
+  border: 1px solid var(--bd);
+}
+.intro:hover {
+  background: var(--header);
+  color: var(--bd);
+}
+
 
 .header {
   font-size: 12pt;
   font-weight: bold; 
-  color: rgb(90,90,90);
-  background: rgb(250,250,250);
   padding: 6px 14px 6px 14px;
+  color: var(--header-fg);
+  background: var(--bg);
+}
+td.header:hover { 
+  background: var(--bd); 
+  border: 1px solid var(--header);
 }
 
-td.header:hover { background: rgb(245,245,245); }
-.body { color: rgb(110,110,110); padding: 6px 4px 6px 20px; }
+
+.body { 
+  color: var(--body);
+  padding: 6px 4px 6px 20px; 
+}
 td.postal {
-  color: rgb(110,110,110); 
+  color: var(--body);
   vertical-align: top;
   padding: 4px 20px 4px 20px;
 }
 
-td.gpgheader {
-  font-size: 11pt;
-  font-weight: bold; 
-  color: rgb(90,90,90);
-  background: rgb(250,250,250);
-  padding: 6px 14px 6px 14px;
-  text-align: center;
+
+.ref {
+  color: var(--ref);
+  text-decoration: underline;
+  line-height: 1.5em;
 }
-td.gpgheader:hover { background: rgb(248,248,248); }
-
-td.gpg {
-  border: 1px solid rgb(180,180,180);
-  padding: 20px 20px 20px 30px;
-}
-
-.gpglink { color: rgb(0,140,255); text-decoration: none; }
-.gpglink:active, .gpglink:hover { color: rgb(40,155,255); }
-
-pre {
-  vertical-align: top;
-  color: rgb(60,60,60); 
-  margin: 0;
-}
-
-.intro {
-  color: rgb(20,20,20);
-  padding: 15px 50px 15px 50px;
-  text-align: justify;
-  background: rgb(253,253,253);
-  border: 1px solid rgb(248,248,248);
-}
-
-.ref { color: rgb(100,80,60); text-decoration: underline; line-height: 1.5em; }
-.resume { color: rgb(100,80,60); text-decoration: underline; }
-.ref:active, .ref:hover, .resume:active, .resume:hover { 
-  color: rgb(0,102,255); 
+.ref:active, .ref:hover {
+  color: var(--ref-hover);
   text-decoration: none; 
 }
+
 
 .skills {
   margin-left: 40px;
   font-size: 9pt;
   padding-top: 6px;
-  color: rgb(40,40,40);
+  color: var(--skills);
+  letter-spacing: 0.01em;
 }
 
+
+
+/**** Menu: All pages */
 .menu { 
   font-weight: bold;
   font-size: 8pt;
@@ -95,30 +126,31 @@ pre {
   padding: 0px;
   text-decoration: none;
 }
-
 div.menu {
   padding: 2px; 
   display: block;
-  color: rgb(200,200,200);
-  background: rgb(255,255,255);
-  border: 1px solid rgb(230,230,230); 
+  color: var(--menu-fg);
+  background: var(--menu-bg);
+  border: 1px solid var(--bd);
 }
-
 div.menu:hover {
-  background: rgb(200,200,200);
-  color: rgb(255,255,255);
+  background: var(--menu-fg);
+  color: var(--menu-bg);
 }
 
-A.menu { padding: 2px; display: block; }
-A.menu:link, A.menu:visited {
-  color: rgb(40,40,40);
-  border: 1px solid rgb(250,250,250); 
+a.menu { padding: 2px; display: block; border; 0; }
+a.menu:link, a.menu:visited {
+  color: var(--header-fg);
+  background: var(--menu-bg);
 }
-A.menu:hover, A.menu:active { 
-  color: rgb(255,255,255);
-  background: rgb(40,40,40);
-  border: solid 1px rgb(0,0,0);
+a.menu:hover, a.menu:active { 
+  color: var(--menu-bg);
+  background: var(--header-fg);
 }
+
+
+
+/* personal */
 
 .noborder { border: 0; padding: 0; margin: 0; vertical-align: top; }
 .label { 
@@ -128,23 +160,56 @@ A.menu:hover, A.menu:active {
   white-space: nowrap;
 }
 .info { color: rgb(50,50,50); padding: 2px 8px 2px 4px; }
-
 .img { 
   border: 0;
   padding: 3px 0px 0px 0px; 
-  background: white url(jason.jpg); 
+  background: white url(jason1.jpg); 
   background-repeat: no-repeat;
   width: 120px; height: 160px; 
 }
 td.img:hover { 
-  background: white url(jason3.jpg); 
+  background: white url(jason1.jpg); 
   background-repeat: no-repeat;
   border: 0;
 }
 
+
+/* music */
+.resume {
+  color: var(--menu);
+  text-decoration: underline; 
+}
+.resume:active, .resume:hover { 
+  color: var(--menu-bg);
+  text-decoration: none; 
+}
 em { 
   font-style: normal; 
-  font-weight: 600; 
-  color: rgb(100,100,100); 
-  font-size: 9pt;
+  font-weight: bold;
+  color: var(--ref);
+  /* font-size: 9pt; */
+  font-size: 92%;
+}
+
+
+/* GPG and starchart */
+td.gpgheader {
+  font-size: 11pt;
+  font-weight: bold; 
+  color: rgb(90,90,90);
+  background: var(--bg);
+  padding: 6px 14px 6px 14px;
+  text-align: center;
+}
+td.gpgheader:hover { background: rgb(248,248,248); }
+td.gpg {
+  border: 1px solid rgb(180,180,180);
+  padding: 20px 20px 20px 30px;
+}
+.gpglink { color: rgb(0,140,255); text-decoration: none; }
+.gpglink:active, .gpglink:hover { color: rgb(40,155,255); }
+pre {
+  vertical-align: top;
+  color: rgb(60,60,60); 
+  margin: 0;
 }
