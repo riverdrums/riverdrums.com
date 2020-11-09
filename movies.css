@@ -46,6 +46,30 @@ table.movies-outer tr td.first {
   border-bottom: 0;
 }
 
+#alphabet { text-align: left; text-decoration: none; }
+#alphabet ul li { 
+  padding: 0;
+  margin: 0;
+  display: inline;
+  list-style-type: none;
+  padding-left: 4px;
+  padding-right: 4px;
+  text-decoration: none;
+}
+#alphabet ul li a, #alphabet ul li a:active, #alphabet ul li a:visited { 
+  color: rgb(50,150,255); 
+  background-color: rgb(255,255,240); 
+  text-decoration: none; 
+  padding: 3px 4px 3px 4px;
+  display: inline;
+}
+#alphabet ul li a:hover { 
+  color: rgb(50,120,255); 
+  background-color: rgb(255,255,235); 
+  padding: 2px 3px 2px 3px;
+  border: 1px solid rgb(190,240,255);
+}
+
 
 div.index { text-align: left; }
 div.index ul, div.index ul li { padding: 0; margin: 0; }
@@ -61,6 +85,13 @@ div.index ul li a:hover {
   background-color: rgb(255,255,235); 
   padding: 2px 2px 2px 2px;
   border: 1px solid rgb(190,240,255);
+}
+div.index ul li strong {
+  font-size: 150%;
+  font-weight: bold;
+}
+div.index ul li a.top {
+  display: inline;
 }
 
 /* Style the button that is used to open and close the collapsible content */
