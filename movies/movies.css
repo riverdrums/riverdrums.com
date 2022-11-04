@@ -80,6 +80,10 @@ div.index ul li a, div.index ul li a:active, div.index ul li a:visited {
   padding: 3px 3px 3px 3px;
   display: block;
 }
+div.index ul li.indexlink {
+  margin-left: 20px;
+  display: block;
+}
 div.index ul li a:hover { 
   color: rgb(50,120,255); 
   background-color: rgb(255,255,235); 
@@ -87,7 +91,7 @@ div.index ul li a:hover {
   border: 1px solid rgb(190,240,255);
 }
 div.index ul li strong {
-  font-size: 150%;
+  font-size: 110%;
   font-weight: bold;
 }
 div.index ul li a.top {
@@ -112,6 +116,27 @@ div.index ul li a.top {
   color: rgb(140,0,60); 
   background-color: rgb(255,255,240); 
 }
+
+
+div.other { 
+  text-align: center; 
+  padding-left: 10px;
+}
+div.other ul, div.other ul li { padding: 0; margin: 0; display: inline-block; }
+div.other ul li a, div.other ul li a:active, div.other ul li a:visited { 
+  color: rgb(50,150,255); 
+  background-color: rgb(255,255,240); 
+  text-decoration: none; 
+  padding: 3px 3px 3px 3px;
+  /* display: block; */
+}
+div.other ul li a:hover { 
+  color: rgb(50,120,255); 
+  background-color: rgb(255,255,235); 
+  padding: 2px 2px 2px 2px;
+  border: 1px solid rgb(190,240,255);
+}
+
 
 /* Style the collapsible content. Note: hidden by default */
 .index {
@@ -138,3 +163,17 @@ div.index ul li a.top {
 
 .active:after { content: "\2796"; color: rgb(140,0,60); }
 .active:before { content: "\2796"; color: rgb(140,0,60); }
+
+a.xlink, a.xlink:active, a.xlink:visited { 
+  color: rgb(50,150,255); 
+  background-color: rgb(255,255,240); 
+  text-decoration: none; 
+  padding: 3px 1px 3px 1px;
+}
+
+a.xlink:hover { 
+  color: rgb(50,120,255); 
+  background-color: rgb(255,255,235); 
+  padding: 2px 0px 2px 0px;
+  border: 1px solid rgb(190,240,255);
+}
