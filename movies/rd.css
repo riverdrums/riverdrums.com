@@ -1,0 +1,49 @@
+body { 
+  font-family: "Times New Roman",Arial,Helvetica,sans-serif;
+  background-color: rgb(255,255,240); 
+  color: rgb(0, 0, 0);
+}
+
+h2 { 
+  font-size: 290%;
+  font-weight: normal; 
+  color: rgb(140,0,60); 
+  background-color: rgb(255,255,240); 
+  margin: 60px 60px 20px 60px;
+  letter-spacing: 0.03em;
+}
+
+table { margin-left: auto; margin-right: auto; }
+td { font-size: 108%; font-weight: normal; text-align: center; letter-spacing: 0.04em; }
+span { display: inline-block; }
+.center { text-align: center; }
+.left { text-align: left; }
+.empty { font-size: 1px; height: 10px; }
+.music { font-size: 100%; font-weight: normal; text-align: left; letter-spacing: 0.04em; padding-right: 10px; width: 140px; }
+.music a { width: 100%; display: inline-block; }
+.year { color: rgb(140,0,60); font-size: 12pt; text-align: right; padding-right: 10px; padding-left: 10px; }
+
+table tr td.title {
+  font-size: 108%; 
+  font-weight: normal; 
+  text-align: center; 
+  letter-spacing: 0.5em; 
+  color: rgb(120,120,120);
+}
+
+a, a:active, a:visited { 
+  color: rgb(50,150,255); 
+  background-color: rgb(255,255,240); 
+  text-decoration: none; 
+  padding: 8px 6px 8px 6px;
+  display: block;
+}
+
+a:hover { 
+  color: rgb(50,120,255); 
+  background-color: rgb(255,255,235); 
+  padding: 7px 5px 7px 5px;
+  border: 1px solid rgb(190,240,255);
+}
+
+hr { border: 0; height: 1px; width: 95%; background-color: rgb(120,120,120); color: rgb(120,120,120); }
